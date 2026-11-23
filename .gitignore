@@ -1,0 +1,16 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+logs/*.log
+
+visualizations/
+
+
+# Starter CSV templates are not project deliverables.
+*_template.csv
+**/*_template.csv
+
+

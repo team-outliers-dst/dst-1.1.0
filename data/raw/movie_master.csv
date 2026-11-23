@@ -1,0 +1,10 @@
+
+movie_id,movie_name,language,release_date,youtube_video_id,film_type,franchise_or_predecessor,youtube_channel,official_trailer_verified
+RD001,Dhurandhar,Hindi,2025-12-05,BKOVzHcjEIo,Standalone,,JioStudios,true
+RD002,Chhaava,Hindi,2025-02-14,77vRyWNqZjM,Standalone,,Maddock Films,true
+RD003,Coolie,Tamil,2025-08-14,qeVfT2iLiu0,Standalone,,Sun TV,true
+RD004,Good Bad Ugly,Tamil,2025-04-10,bJbZAXbF3Xo,Standalone,,T-Series Tamil,true
+RD005,Su From So,Kannada,2025-07-25,Fe11GLdTL5k,Standalone,,Lighter Buddha Films,true
+RD006,Ekka,Kannada,2025-07-18,brJ1l8YsW7M,Standalone,,Anand Audio,true
+RD007,L2: Empuraan,Malayalam,2025-03-27,PGqltBCo6cU,Sequel,Lucifer (2019),Aashirvad Cinemas,true
+RD008,Lokah: Chapter 1 – Chandra,Malayalam,2025-08-28,64XHtNWTB5o,Franchise opener,Lokah Cinematic Universe,Wayfarer Films Music,true

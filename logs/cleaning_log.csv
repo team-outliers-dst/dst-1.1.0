@@ -1,0 +1,48 @@
+dataset_name,column_affected,problem_identified,rows_affected,rows_before,rows_after,cleaning_action,justification
+youtube_comments,comment_id,one duplicate comment ID,1,8000,7999,Removed duplicate rows using comment_id,Preserve one row per source comment; comment IDs are unique identifiers
+youtube_comments,comment_text,0 rows contained HTML tags,0,7999,7999,Removed HTML tags and trimmed leading/trailing whitespace,Produce plain-text comment values while preserving row identity
+youtube_comments,comment_text,0 missing text values,0,7999,7999,Retained missing values without replacement,Missing comments must not be invented or silently replaced with placeholder text
+youtube_comments,published_at,0 values could not be parsed as timestamps,0,7999,7999,Converted to timezone-aware pandas datetime,Standardise published/retrieval timestamps; invalid values remain missing
+youtube_comments,retrieved_at,0 values could not be parsed as timestamps,0,7999,7999,Converted to timezone-aware pandas datetime,Standardise published/retrieval timestamps; invalid values remain missing
+youtube_comments,like_count,0 missing or non-numeric values,0,7999,7999,Converted to numeric dtype,Enable quantitative aggregation without treating missing counts as zero
+youtube_stats,video_id,duplicate video IDs,0,8,8,Removed duplicate rows using video_id,video_id is the primary-key row identifier for each verified trailer
+youtube_stats,published_at,0 values could not be parsed,0,8,8,Converted to timezone-aware pandas datetime,Standardise snapshot and publication timestamps; missing values remain missing
+youtube_stats,retrieved_at,0 values could not be parsed,0,8,8,Converted to timezone-aware pandas datetime,Standardise snapshot and publication timestamps; missing values remain missing
+youtube_stats,views,0 missing or non-numeric values,0,8,8,Converted to numeric dtype with coercion,Enable rates and aggregations; no source count was replaced with zero
+youtube_stats,likes,0 missing or non-numeric values,0,8,8,Converted to numeric dtype with coercion,Enable rates and aggregations; no source count was replaced with zero
+youtube_stats,comment_count,0 missing or non-numeric values,0,8,8,Converted to numeric dtype with coercion,Enable rates and aggregations; no source count was replaced with zero
+youtube_stats,all fields,0 missing values across trailer statistics,0,8,8,Retained missing values without replacing them with zero,"An unavailable view, like, or comment value is not evidence that the source count is zero"
+tmdb_movie_metadata,TMDB JSON nested fields,semi-structured nested JSON requires tabular flattening,8,8,8,Flattened JSON API payload fields with pd.json_normalize() and mapped master movie IDs,Convert nested TMDB metadata and the credits array into one row per movie
+tmdb_movie_metadata,tmdb_id,0 duplicate TMDB IDs,0,8,8,Checked duplicate TMDB IDs; no duplicate rows removed,No source TMDB movie duplicate was present in the collected metadata
+tmdb_movie_metadata,all TMDB fields,0 missing values across the tabular TMDB dataset,0,8,8,Retained missing metadata values without zero or placeholder replacement,Missing API fields must remain distinguishable from source-confirmed values
+tmdb_movie_metadata,movie_name,TMDB titles may differ in punctuation or naming from the project master list,8,8,8,Mapped each flattened TMDB row to the master movie_id and retained master_movie_name,Preserve consistent assignment titles while keeping the original TMDB title for traceability
+batch1_time_series,Time,0 invalid dates,0,16,16,Parsed YYYY-MM-DD values as pandas datetime,Standardise date-wise alignment across monthly exports
+batch1_time_series,Dhurandhar,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch1_time_series,Chhaava,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch1_time_series,Coolie,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch1_time_series,Good Bad Ugly,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch1_time_series,Time,0 duplicate time rows,0,16,16,Dropped duplicate rows using Time; sorted cleaned output,Use one row per date or region for analysis
+batch2_time_series,Time,0 invalid dates,0,16,16,Parsed YYYY-MM-DD values as pandas datetime,Standardise date-wise alignment across monthly exports
+batch2_time_series,Su From So,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch2_time_series,Ekka,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch2_time_series,L2: Empuraan,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch2_time_series,Lokah Chapter 1: Chandra,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch2_time_series,Dhurandhar,"0 missing, <1, or non-numeric values",0,16,16,Converted values to numeric and retained '<1' as missing,Google Trends '<1' is not a confirmed zero and must not be replaced
+batch2_time_series,Time,0 duplicate time rows,0,16,16,Dropped duplicate rows using Time; sorted cleaned output,Use one row per date or region for analysis
+batch1_by_region,Region,0 region labels had surrounding whitespace,0,35,35,Trimmed region labels and duplicate Region keys,Standardise region labels for grouping and chart labels
+batch1_by_region,Dhurandhar,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch1_by_region,Chhaava,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch1_by_region,Coolie,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch1_by_region,Good Bad Ugly,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch1_by_region,Region,0 duplicate region rows,0,35,35,Dropped duplicate rows using Region; sorted cleaned output,Use one row per date or region for analysis
+batch2_by_region,Region,0 region labels had surrounding whitespace,0,35,35,Trimmed region labels and duplicate Region keys,Standardise region labels for grouping and chart labels
+batch2_by_region,Su From So,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch2_by_region,Ekka,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch2_by_region,L2: Empuraan,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch2_by_region,Lokah Chapter 1: Chandra,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch2_by_region,Dhurandhar,"0 missing, <1, or non-numeric values",0,35,35,Converted values to numeric and retained '<1' as missing,Preserve regional scores without interpreting '<1' or missing values as zero
+batch2_by_region,Region,0 duplicate region rows,0,35,35,Dropped duplicate rows using Region; sorted cleaned output,Use one row per date or region for analysis
+google_trends_time_series,Time,two independent Google Trends exports require date alignment,16,16,16,Outer-joined Batch 1 and Batch 2 by Time; retained Dhurandhar from Batch 1,Use the shared Dhurandhar monthly series as an anchor without duplicating it
+google_trends_time_series,Dhurandhar,cross-batch anchor agreement must be verified,0,16,16,Compared Dhurandhar monthly scores and applied scaling factor 1.0,"All overlapping anchor scores matched, so no rescaling was needed"
+google_trends_batch1,Region and search-term scores,regional anchor scores differ across batches,0,35,35,Cleaned and retained each regional batch separately; no cross-batch join,Directly combining regional scores would falsely treat different batch normalization scales as comparable
+google_trends_batch2,Region and search-term scores,regional anchor scores differ across batches,0,35,35,Cleaned and retained each regional batch separately; no cross-batch join,Directly combining regional scores would falsely treat different batch normalization scales as comparable

@@ -1,0 +1,5 @@
+source_name,source_url,data_format,fields_collected,collection_method,access_date,terms_or_usage_notes
+The Movie Database (TMDB),https://developer.themoviedb.org/docs,JSON/CSV,"movie ID, title, genre, language, release date, runtime, rating, votes, cast",TMDB API,2026-11-23,API terms apply; credentials remain private.
+YouTube Data API,https://developers.google.com/youtube/v3,JSON/CSV/text,trailer statistics and publicly accessible comments,YouTube videos.list and commentThreads.list,2026-11-23,YouTube API Terms and quota limits apply; comments remain public-source text.
+Google Trends,https://trends.google.com/trends/,CSV,search interest (0-100),manual consistent India CSV export,2026-11-23,"Google Trends terms apply; relative, not absolute search volume."
+IMDb 50K Reviews,https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews,CSV,general reviews and sentiment labels,supplementary Kaggle download,2026-11-23,Separate general movie-review corpus; not merged with selected films.
