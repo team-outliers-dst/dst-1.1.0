@@ -1,0 +1,11 @@
+{
+  "input_file": "/Users/vrinda/Library/CloudStorage/OneDrive-Personal/RVCE/Year 4/dst/HW1/IMDB Dataset.csv",
+  "records_read": 50000,
+  "records_dropped_null_or_empty": 0,
+  "duplicates_removed": 422,
+  "records_after_cleaning_and_dedup": 49578,
+  "min_records_required": 50000,
+  "processed_at_least_min_records": true,
+  "runtime_seconds": 9.8,
+  "spark_version": "4.3.0"
+}
