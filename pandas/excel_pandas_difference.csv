@@ -1,0 +1,5 @@
+language,excel_avg_views,excel_avg_likes,excel_avg_like_rate,excel_avg_comment_rate,excel_avg_days_before,pandas_avg_views,pandas_avg_likes,pandas_avg_like_rate,pandas_avg_comment_rate,pandas_avg_days_before,delta_avg_views,delta_avg_likes,delta_avg_like_rate,delta_avg_comment_rate,delta_avg_days_before
+Hindi,91824778.0,1076538.0,1.0,0.0,19.0,91824778.0,1076538.0,1.0,0.0,19.0,0.0,0.0,0.0,0.0,0.0
+Kannada,5049854.0,95632.0,2.0,0.0,8.0,5049854.0,95632.0,2.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
+Malayalam,16995054.0,372936.0,2.0,0.0,5.0,16995054.0,372936.0,2.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
+Tamil,16224291.0,465874.0,3.0,0.0,8.0,16224291.0,465874.0,3.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0

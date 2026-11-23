@@ -1,0 +1,5 @@
+language,films,total_views,avg_views,avg_likes,avg_comments,avg_like_rate_pct,avg_comment_rate_pct,avg_days_before_release
+Hindi,2,183649555,91824778.0,1076538.0,74447.0,1.0,0.0,19.0
+Kannada,2,10099709,5049854.0,95632.0,3709.0,2.0,0.0,8.0
+Malayalam,2,33990108,16995054.0,372936.0,23797.0,2.0,0.0,5.0
+Tamil,2,32448582,16224291.0,465874.0,17664.0,3.0,0.0,8.0
