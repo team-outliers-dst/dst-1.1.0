@@ -1,4 +1,4 @@
-# Release Day Radar
+# Release Day Radar - Case Study A
 
 Release Day Radar is a reproducible, exploratory analysis of online engagement
 for eight Indian films: two each in Hindi, Tamil, Malayalam, and Kannada.
