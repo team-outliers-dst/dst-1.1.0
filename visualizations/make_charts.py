@@ -1,4 +1,4 @@
-"""Extra Release Day Radar charts. Usage: python make_charts.py <dst-2.0-main dir> <out dir>"""
+"""Release Day Radar charts. Usage: python make_charts.py <dst-1.1.0-main dir>"""
 import sys, re, unicodedata
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -11,8 +11,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 # ---------- PATH CONFIGURATION ----------
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-VDATA = HERE / "data"
 C = ROOT / "data" / "cleaned"
+VDATA = C / "vis_data"
 OUT = HERE / "visuals"
 OUT.mkdir(parents=True, exist_ok=True)
 

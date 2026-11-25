@@ -1,9 +1,9 @@
 movie_name,release_date,day_number,date,india_net_cr,india_gross_cr,currency,unit,collection_basis,source,notes
-Dhurandhar,2025-12-05,1,2025-12-05,28.0,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,Only first 5 daily rows were verifiable from the retrieved source extract; remaining days intentionally left out.
-Dhurandhar,2025-12-05,2,2025-12-06,32.0,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,Only first 5 daily rows were verifiable from the retrieved source extract; remaining days intentionally left out.
-Dhurandhar,2025-12-05,3,2025-12-07,43.0,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,Only first 5 daily rows were verifiable from the retrieved source extract; remaining days intentionally left out.
-Dhurandhar,2025-12-05,4,2025-12-08,23.25,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,Only first 5 daily rows were verifiable from the retrieved source extract; remaining days intentionally left out.
-Dhurandhar,2025-12-05,5,2025-12-09,27.0,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,Only first 5 daily rows were verifiable from the retrieved source extract; remaining days intentionally left out.
+Dhurandhar,2025-12-05,1,2025-12-05,28.0,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,Only first 5 daily rows were verifiable from the retrieved source extract; remaining days left out.
+Dhurandhar,2025-12-05,2,2025-12-06,32.0,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,
+Dhurandhar,2025-12-05,3,2025-12-07,43.0,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,
+Dhurandhar,2025-12-05,4,2025-12-08,23.25,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025
+Dhurandhar,2025-12-05,5,2025-12-09,27.0,,INR,crore,India net,https://www.sacnilk.com/movie/Dhurandhar_2025,
 Chhaava,2025-02-14,1,2025-02-14,31.0,,INR,crore,India net,https://www.sacnilk.com/movie/Chaava_2024,
 Chhaava,2025-02-14,2,2025-02-15,37.0,,INR,crore,India net,https://www.sacnilk.com/movie/Chaava_2024,
 Chhaava,2025-02-14,3,2025-02-16,48.5,,INR,crore,India net,https://www.sacnilk.com/movie/Chaava_2024,

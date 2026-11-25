@@ -42,13 +42,15 @@ dst-1.1.0/
 │   ├── pyspark_analysis.py            # Separate IMDb 50K corpus analysis
 │   ├── database.py                    # MySQL schema creation and data loading
 │   ├── data_inventory.py              # Data inventory and source register
-│   └── visualizations.py               # Engagement and sentiment charts
+│   └── visualizations.py              # Engagement and sentiment charts
 │
 ├── sql/
 │   ├── schema.sql                     # Normalised MySQL schema (3 tables)
 │   └── analysis_queries.sql           # Five analytical SQL queries
 │
-├── visualizations/                    # Generated PNG charts
+├── visualizations/
+│   ├── make_charts.py                 # Buzz, engagement and performance charts
+│   ├── visuals/                       # Generated PNG charts
 ├── logs/                              # Generated cleaning and processing logs
 ├── main.py                            # Main end-to-end analysis pipeline
 ├── requirements.txt                   # Python dependencies
