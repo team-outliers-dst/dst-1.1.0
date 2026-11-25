@@ -50,7 +50,8 @@ dst-1.1.0/
 │
 ├── visualizations/
 │   ├── make_charts.py                 # Buzz, engagement and performance charts
-│   ├── visuals/                       # Generated PNG charts
+│   └── visuals/                       # Generated PNG charts
+│
 ├── logs/                              # Generated cleaning and processing logs
 ├── main.py                            # Main end-to-end analysis pipeline
 ├── requirements.txt                   # Python dependencies
@@ -91,7 +92,7 @@ Google Trends values represent relative search interest, not absolute search cou
 | **Google Trends** | `src/google_trends_analysis.py` | Cleaned time-series and regional exports, batch comparison, aligned interest data, and charts |
 | **PySpark** | `src/pyspark_analysis.py` | Text-cleaning and review-length summaries for the separate IMDb 50K corpus |
 | **MySQL** | `sql/schema.sql`, `sql/analysis_queries.sql` | Relational storage for films, trailer statistics, and comments; five analytical queries |
-| **matplotlib / seaborn** | `src/visualizations.py`, `src/google_trends_analysis.py` | PNG visualisations of engagement, metadata relationships, sentiment, and search interest |
+| **matplotlib / seaborn** | `src/visualizations.py`, `visualizations/make_charts.py`, `src/google_trends_analysis.py` | PNG visualisations of engagement, metadata relationships, sentiment, and search interest |
 
 ---
 
