@@ -8,11 +8,7 @@ The selected-film analysis uses TMDB, YouTube Data API, and manually exported Go
 
 ## Research Questions
 
-- How does trailer engagement vary across film languages and genres?
-- How are TMDB metadata, including ratings and lead-cast popularity, associated with trailer views and engagement?
-- How does Google Trends search interest vary across the selected films, and how does it relate to observed trailer engagement?
-- What sentiment and recurring discussion topics appear in publicly accessible comments on verified official trailers?
-- What additional text-level patterns can be explored in the separate IMDb 50K review corpus?
+How do film metadata, trailer performance, Google search interest, and audience sentiment collectively influence online engagement with Indian films across different languages and genres?
 
 ---
 
